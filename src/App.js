@@ -1,15 +1,20 @@
 import './App.css';
-import formElementsWithTab from './json-config/formElementsWithTab.json';
-import formElements from './json-config/formElements.json';
 import { useState, useEffect } from 'react';
 import DynamicForm from './components/DynamicForm';
 import NavigationBar from './components/NavigationBar';
 
 function App() {
-  const [dynamicForms, setDynamicForms] = useState([]);
-  const [dynamicFormsWithTab, setDynamicsFormWithTab] = useState([]);
 
   const [jsonData, setJsonData] = useState([]);
+  const [selectedJson, setSelectedJson] = useState(null);
+
+  const onSelectJson = (json) => {
+    console.log(json);
+    json.fileData.map((data) => (
+      console.log(data)
+    ));
+    setSelectedJson(json);
+  };
 
   useEffect(() => {
     const fetchJsonData = async () => {
@@ -31,34 +36,22 @@ function App() {
     return files;
   }
 
-
-  // useEffect(() => {
-  //   setDynamicForms(formElements);
-  //   setDynamicsFormWithTab(formElementsWithTab);
-  // }, [dynamicForms, dynamicFormsWithTab])
-
   return (
 
     <div className='app-container'>
       <nav className="nav-bar">
         <h2>Config JSON Files:</h2>
         <ul>
-          <NavigationBar jsonData={jsonData} />
+          <NavigationBar jsonData={jsonData} onSelect={onSelectJson} />
         </ul>
       </nav>
       <div className="container">
         <h1 className="heading">JCI Dynamic Form POC</h1>
-        {jsonData.map((data, index) => (
+        {selectedJson && selectedJson.fileData.map((data, index) => (
           <div key={"devkey" + index} data-testid="dynamic-form">
-            <DynamicForm key={index} dynamicForms={data.fileData} data-testid="dynamic-form"></DynamicForm>
+            <DynamicForm key={index} page={data} data-testid="dynamic-form"></DynamicForm>
           </div>
         ))}
-        {/* <div key="devkey1" data-testid="dynamic-form">
-        <DynamicForm key="1" dynamicForms={dynamicForms} data-testid="dynamic-form"></DynamicForm>
-      </div>
-      <div key="devkey2" data-testid="dynamic-form">
-        <DynamicForm key="2" dynamicForms={dynamicFormsWithTab} ></DynamicForm>
-      </div> */}
       </div>
     </div>
   );

@@ -39,5 +39,46 @@
                 ]
             }
         ]
+    },
+    {
+        "page_label": "Modify Dynamic Form 2",
+        "page_id": "simpleFormModify2",
+        "tabs": [
+            {
+                "tab_label": "Modify Fire Panel info2",
+                "fields": [
+                    {
+                        "field_id": "modify_panel_name_2",
+                        "field_label": "Panel Name",
+                        "field_mandatory": "yes",
+                        "field_placeholder": "Enter Panel name",
+                        "field_type": "text",
+                        "rules": []
+                    },
+                    {
+                        "field_id": "modify_panel_type_2",
+                        "field_label": "Panel Type",
+                        "field_value": "",
+                        "field_mandatory": "yes",
+                        "field_options": [
+                            {
+                                "option_label": "Automatic"
+                            },
+                            {
+                                "option_label": "Manual"
+                            }
+                        ],
+                        "field_type": "select"
+                    },
+                    {
+                        "field_id": "modify_panel_contact_2",
+                        "field_label": "Contact No.",
+                        "field_mandatory": "yes",
+                        "field_placeholder": "Enter contact no.",
+                        "field_type": "text"
+                    }
+                ]
+            }
+        ]
     }
 ]

@@ -1,11 +1,12 @@
 import React from 'react';
 
-function NavigationBar({ jsonData }) {
+function NavigationBar(props) {
+    const { jsonData, onSelect } = props;
     return (
         <div>
             <ul>
                 {jsonData.map((data, index) => (
-                    <li key={index}>{data.fileName}</li>
+                    <li key={index} onClick={() => onSelect(data)}>{data.fileName}</li>
                 ))}
             </ul>
         </div>
