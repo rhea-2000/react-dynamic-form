@@ -1,0 +1,88 @@
+[
+    {
+        "page_label": "Dynamic Form with Tabs",
+        "page_id": "formWithTabs",
+        "tabs": [
+            {
+                "tab_label": "Account Details",
+                "fields": [
+                    {
+                        "field_id": "english_name",
+                        "field_label": "Name",
+                        "field_mandatory": "yes",
+                        "field_placeholder": "Enter name",
+                        "field_type": "text"
+                    },
+                    {
+                        "field_id": "email_idS",
+                        "field_label": "Email",
+                        "field_mandatory": "yes",
+                        "field_placeholder": "Enter email",
+                        "field_type": "text"
+                    },
+                    {
+                        "field_id": "employment",
+                        "field_label": "Department",
+                        "field_value": "Part-Time",
+                        "field_mandatory": "yes",
+                        "field_options": [
+                            {
+                                "option_label": "IT"
+                            },
+                            {
+                                "option_label": "Admin"
+                            }
+                        ],
+                        "field_type": "select"
+                    }
+                ]
+            },
+            {
+                "tab_label": "Job Application Form",
+                "fields": [
+                    {
+                        "field_id": "job_name",
+                        "field_label": "Name",
+                        "field_mandatory": "yes",
+                        "field_placeholder": "Enter name",
+                        "field_type": "text"
+                    },
+                    {
+                        "field_id": "job_email",
+                        "field_label": "Email",
+                        "field_mandatory": "yes",
+                        "field_placeholder": "Enter email",
+                        "field_type": "text"
+                    },
+                    {
+                        "field_id": "job_employment",
+                        "field_label": "Slider",
+                        "field_value": 20,
+                        "field_mandatory": "yes",
+                        "field_type": "slider"
+                    },
+                    {
+                        "field_id": "job_contact",
+                        "field_label": "Contact No.",
+                        "field_mandatory": "yes",
+                        "field_placeholder": "Enter contact no.",
+                        "field_type": "text"
+                    },
+                    {
+                        "field_id": "job_driving_license",
+                        "field_label": "I confirm to have driving license.",
+                        "field_type": "checkbox",
+                        "field_value": true
+                    },
+                    {
+                        "field_id": "job_identity",
+                        "field_label": "Driving License No.",
+                        "field_mandatory": "yes",
+                        "field_placeholder": "e.g. 012 345 678",
+                        "field_type": "text"
+                    }
+                ]
+            }
+        ]
+    }
+]

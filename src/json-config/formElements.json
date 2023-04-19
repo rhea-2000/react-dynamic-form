@@ -1,0 +1,43 @@
+[
+    {
+        "page_label": "Simple Dynamic Form",
+        "page_id": "simpleForm",
+        "tabs": [
+            {
+                "tab_label": "Fire Panel info",
+                "fields": [
+                    {
+                        "field_id": "panel_name",
+                        "field_label": "Panel Name",
+                        "field_mandatory": "yes",
+                        "field_placeholder": "Enter Panel name",
+                        "field_type": "text",
+                        "rules": []
+                    },
+                    {
+                        "field_id": "panel_type",
+                        "field_label": "Panel_Type",
+                        "field_value": "",
+                        "field_mandatory": "yes",
+                        "field_options": [
+                            {
+                                "option_label": "Automatic"
+                            },
+                            {
+                                "option_label": "Manual"
+                            }
+                        ],
+                        "field_type": "select"
+                    },
+                    {
+                        "field_id": "panel_contact",
+                        "field_label": "Contact No.",
+                        "field_mandatory": "yes",
+                        "field_placeholder": "Enter contact no.",
+                        "field_type": "text"
+                    }
+                ]
+            }
+        ]
+    }
+]

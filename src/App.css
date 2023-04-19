@@ -1,0 +1,116 @@
+.App {
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+.container {
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 20px;
+  background: ghostwhite;
+  flex: 1;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.heading {
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+.nav-bar {
+  width: 200px;
+  margin: 20px;
+}
+
+.nav-bar h2 {
+  margin-bottom: 10px;
+}
+
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+li:hover {
+  text-decoration: underline;
+}
+
+
+h3 {
+  margin-bottom: 20px;
+}
+
+.sidebar {
+  background-color: #333;
+  color: #fff;
+}
+
+.sidebar a {
+  color: #fff;
+}
+
+.content {
+  background-color: #fff;
+  padding: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-weight: bold;
+}
+
+.form-control:focus {
+  border-color: #42a5f5;
+  box-shadow: none;
+}
+
+.btn-primary {
+  background-color: #42a5f5;
+  border-color: #42a5f5;
+}
+
+.btn-primary:hover {
+  background-color: #2196f3;
+  border-color: #2196f3;
+}
+
+input[type="range"] {
+  width: 100%;
+  height: 10px;
+  background: #ddd;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #2196f3;
+  color: blue;
+  cursor: pointer;
+  border-radius: 50%;
+  border: none;
+  margin-top: -5px;
+}
