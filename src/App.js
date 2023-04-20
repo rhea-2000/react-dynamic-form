@@ -47,6 +47,7 @@ function App() {
       </nav>
       <div className="container">
         <h1 className="heading">JCI Dynamic Form POC</h1>
+        <p><button>Reset to Default</button></p>
         {selectedJson && selectedJson.fileData.map((data, index) => (
           <div key={"devkey" + index} data-testid="dynamic-form">
             <DynamicForm key={index} page={data} data-testid="dynamic-form"></DynamicForm>
