@@ -15,8 +15,6 @@ jobs:
           fetch-depth: 0  
       - name: SonarQube Scan
         run: |
-           - name: SonarQube Scan
-             run: |
                npm install -g sonarqube-scanner
                sonar-scanner \
                -Dsonar.projectKey=jci-bms-platform-react \
