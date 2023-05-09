@@ -17,7 +17,12 @@ jobs:
         run: npm install
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        with:
+          sonarCloudLogin: ${{ secrets.SONAR_TOKEN }}
+          projectBaseDir: .
+          extraProperties: |
+            sonar.projectName=React_JCI
+            sonar.projectKey=jci_React_JCI
+            sonar.sources=src
+            sonar.tests=src
           
