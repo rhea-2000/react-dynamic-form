@@ -16,6 +16,6 @@ jobs:
       - name: SonarQube Scan
         run: |
                npm install -g sonarqube-scanner
-               sonar-scanner -D sonar.projectKey=jci-bms-platform-react \
-               sonar-scanner -D sonar.sources=./src \
-               sonar-scanner -D sonar.login=${{ secrets.SONAR_TOKEN }}
+               sonar-scanner.bat -D sonar.projectKey=jci-bms-platform-react \
+               sonar-scanner.bat -D sonar.sources=./src \
+               sonar-scanner.bat -D sonar.login=${{ secrets.SONAR_TOKEN }}
