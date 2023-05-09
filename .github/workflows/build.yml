@@ -12,13 +12,16 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          fetch-depth: 0  
-      - name: SonarQube Scan
-        run: |
-          npm install -g sonarqube-scanner
-          sonar-scanner.bat ^
-            -D"sonar.projectKey=jci-bms-platform-react" ^
-            -D"sonar.sources=./src" ^
-            -D"sonar.host.url=https://sonarcloud.io" ^
-            -D"sonar.login=$env:SONAR_TOKEN"
+          fetch-depth: 0
+      - name: Install dependencies
+        run: npm install	
+      - name: Run SonarScanner for React
+        uses: sonarsource/sonar-scanner-cli@master
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        with:
+          arguments: >
+            -Dsonar.projectKey=jci-bms-platform-react
+            -Dsonar.projectName=jci-bms-platform
+            -Dsonar.sources=src
                
